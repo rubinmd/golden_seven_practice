@@ -1,16 +1,28 @@
-<h1>Add a new contact</h1>
+<h1>Update a contact</h1>
 <form action="/update_contact/<%= @contact.id %>">
-<label>First Name</label>
-<input type="text" value="<%= @contact.first_name %>" id="first_name" name="first_name">
-<label>Last Name</label>
-<input type="text" value="<%= @contact.last_name %>" id="last_name" name="last_name">
-<label>Last Contact Date</label>
-<input type="text" value="<%= @contact.last_contact_date %>" id="last_contact_date" name="last_contact_date">
-<label>Last Contact Notes</label>
-<input type="text" value="<%= @contact.last_contact_notes %>" id="last_contact_notes" name="last_contact_notes">
-<label>Bio</label>
-<input type="text" value="<%= @contact.bio %>" id="bio" name="bio">
-<label>Image URL</label>
-<input type="text" value="<%= @contact.photo_url %>" id="photo_url" name="photo_url">
-<button>Submit</button>
+  <div class="form-group">
+  <label>First Name</label>
+  <input class="form-control" type="text" value="<%= @contact.first_name %>" id="first_name" name="first_name">
+  </div>
+  <div class="form-group">
+  <label>Last Name</label>
+  <input class="form-control" type="text" value="<%= @contact.last_name %>" id="last_name" name="last_name">
+  </div>
+  <div class="form-group">
+  <label>Last Contact Date</label>
+  <input class="form-control" type="text" value="<%= @contact.last_contact_date %>" id="last_contact_date" name="last_contact_date">
+  </div>
+  <div class="form-group">
+  <label>Last Contact Notes</label>
+  <textarea class="form-control" type="text" id="last_contact_notes" name="last_contact_notes"><%= @contact.last_contact_notes %></textarea>
+  </div>
+  <div class="form-group">
+  <label for="bio">Bio</label>
+  <textarea class="form-control" id="bio" name="bio"><%= @contact.bio %></textarea>
+  </div>
+  <div class="form-group">
+  <label>Image URL</label>
+  <input class="form-control" type="text" value="<%= @contact.photo_url %>" id="photo_url" name="photo_url">
+  </div>
+  <button>Submit</button>
 </form>
